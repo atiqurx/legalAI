@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+import dotenv from "dotenv";
+const result = dotenv.config();
+
 const nextConfig = {
+  reactStrictMode: true,
+  env: result.parsed,
   experimental: {
     serverActions: {
       bodySizeLimit: "20mb",
